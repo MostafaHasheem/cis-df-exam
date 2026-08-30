@@ -107,7 +107,6 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 #app {
@@ -430,14 +429,15 @@ body {
    ────────────────────────────────────────────── */
 
 .exam-screen {
-  height: 100vh;
   display: grid;
-  grid-template-rows: var(--header-height) 1fr var(--footer-height);
   grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
-    "header header"
+    "sidebar header"
     "sidebar content"
-    "footer footer";
+    "sidebar footer";
+  height: 100vh;
+  background: var(--bg-primary);
 }
 
 /* ── Header ── */
@@ -1726,9 +1726,18 @@ body {
 @media (max-width: 768px) {
   /* Layout Adjustments */
   :root {
-    --header-height: 56px;
-    --footer-height: 70px;
-    --sidebar-width: 0px; /* Hide sidebar on mobile */
+    --sidebar-width: 0px;
+  }
+  
+  /* Reset height to allow native scrolling if needed */
+  .exam-screen {
+    height: 100dvh; /* use dynamic viewport height for mobile */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
   }
 
   /* Home Screen */
@@ -1755,29 +1764,25 @@ body {
     white-space: nowrap;
   }
 
-  /* Exam Layout */
-  .exam-screen {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "content"
-      "footer";
-  }
-
-  /* Hide Sidebar entirely on mobile, rely on header/footer buttons */
+  /* Hide Sidebar entirely on mobile */
   .exam-sidebar {
     display: none;
   }
 
   /* Header */
   .exam-header {
-    padding: 0 12px;
+    padding: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
   }
   .header-logo img {
-    height: 20px;
+    height: 24px;
   }
-  .header-proctoring, .header-chat-icon, .access-code-label {
-    display: none; /* Hide non-essentials on mobile to save space */
+  .header-proctoring, .access-code-label {
+    display: none; /* Hide non-essentials */
+  }
+  .header-right {
+    gap: 12px;
   }
   .timer-label {
     display: none;
@@ -1785,39 +1790,49 @@ body {
   .timer-value {
     font-size: 18px;
   }
+  .header-chat-icon {
+    width: 28px;
+    height: 28px;
+  }
   
   /* Question Content */
+  .exam-content {
+    -webkit-overflow-scrolling: touch;
+  }
   .question-header {
-    padding: 12px 16px;
+    padding: 12px;
   }
   .question-number {
     font-size: 14px;
   }
   .question-instruction {
-    margin: 12px 16px 0;
+    margin: 12px 12px 0;
     padding: 8px 12px;
     font-size: 13px;
   }
   .question-body {
-    padding: 16px;
+    padding: 16px 12px;
   }
   .question-text {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   /* Footer */
   .exam-footer {
-    padding: 12px 16px;
+    padding: 12px;
+    gap: 8px;
   }
   .btn-review, .btn-back, .btn-next {
-    padding: 12px 20px;
-    font-size: 14px;
+    padding: 12px;
+    font-size: 13px;
+    flex: 1; /* Stretch buttons equally */
+    justify-content: center;
   }
 
-  /* Drag and Drop Mobile adjustments */
+  /* Drag and Drop */
   .drag-match-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
   }
   .drag-source-panel {
     flex: none;
@@ -1827,8 +1842,8 @@ body {
     gap: 8px;
   }
   .drag-item {
-    font-size: 12px;
-    padding: 10px;
+    font-size: 13px;
+    padding: 12px;
     flex: 1 1 calc(50% - 8px);
   }
   .drag-target-row {
@@ -1841,17 +1856,19 @@ body {
     font-size: 13px;
   }
   .drop-zone {
-    min-height: 48px;
+    min-height: 54px;
   }
 
   /* Review Overlay */
   .review-panel {
     width: 95%;
     max-height: 90vh;
+    padding: 20px;
   }
   .review-grid {
-    grid-template-columns: repeat(5, 1fr);
-    padding: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    padding: 12px 0;
+    gap: 8px;
   }
 
   /* Results Screen */
@@ -1859,13 +1876,14 @@ body {
     padding: 24px 16px;
   }
   .results-stats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
   .results-actions {
     flex-direction: column;
   }
-  .results-wrong-header h3 {
-    font-size: 16px;
+  .btn-retake, .btn-home {
+    width: 100%;
   }
   .results-answer-row {
     flex-direction: column;

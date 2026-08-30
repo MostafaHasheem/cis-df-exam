@@ -6,6 +6,17 @@ import { Timer } from './utils/timer.js';
 import { shuffle, generateAccessCode } from './utils/shuffle.js';
 import { registerSW } from 'virtual:pwa-register';
 
+// Polyfill for Drag and Drop on Mobile devices (iOS/Android)
+import { polyfill } from "mobile-drag-drop";
+import { scrollBehaviourDragImageTranslateOverride } from "mobile-drag-drop/scroll-behaviour";
+import "mobile-drag-drop/default.css";
+
+polyfill({
+  dragImageTranslateOverride: scrollBehaviourDragImageTranslateOverride
+});
+
+window.addEventListener('touchmove', function() {}, {passive: false});
+
 // Register Service Worker for offline PWA support
 const updateSW = registerSW({
   onNeedRefresh() {
@@ -93,7 +104,7 @@ function renderHome() {
     <div class="home-screen">
       <div class="home-header">
         <div class="home-logo">
-          <img src="/sn-university-logo.svg" alt="ServiceNow University" />
+          <img src="sn-university-logo.svg" alt="ServiceNow University" />
           <span class="home-logo-text">Exam Simulator</span>
         </div>
         <div class="home-nav">
@@ -329,7 +340,7 @@ function renderExam() {
       <header class="exam-header">
         <div class="header-left">
           <div class="header-logo">
-            <img src="/sn-university-logo.svg" alt="ServiceNow University" />
+            <img src="sn-university-logo.svg" alt="ServiceNow University" />
           </div>
         </div>
         <div class="header-center">
@@ -874,7 +885,7 @@ function renderResults() {
     <div class="results-screen">
       <div class="results-container">
         <div class="results-header">
-          <img src="/sn-university-logo.svg" alt="ServiceNow University" />
+          <img src="sn-university-logo.svg" alt="ServiceNow University" />
           <div class="results-score-circle ${r.passed ? 'pass' : 'fail'}">
             <span class="results-score-value">${r.scorePercent}%</span>
             <span class="results-score-label">Score</span>
@@ -942,4 +953,13 @@ function renderResults() {
 }
 
 // ── Initialize ──
-render();
+try {
+  render();
+} catch (error) {
+  document.body.innerHTML = `<div style="color:red; padding:20px; font-family:monospace; background:white; position:fixed; top:0; left:0; right:0; bottom:0; z-index:9999;">
+    <h2>Application Error</h2>
+    <p>${error.message}</p>
+    <pre>${error.stack}</pre>
+  </div>`;
+  console.error(error);
+}
