@@ -263,6 +263,14 @@ function startExam(bankId) {
   state.answers = {};
   state.flags = new Set();
   state.dragState = {};
+  
+  // Pre-shuffle sources for drag-match questions
+  bank.questions.forEach(q => {
+    if (q.type === 'drag-match') {
+      q.shuffledSources = shuffle([...q.sources]);
+    }
+  });
+
   state.accessCode = generateAccessCode();
   state.timerState = 'normal';
   state.showReview = false;
@@ -464,7 +472,7 @@ function renderDragMatch(q) {
   return `
     <div class="drag-match-container">
       <div class="drag-source-panel">
-        ${q.sources.map((src, i) => `
+        ${(q.shuffledSources || q.sources).map((src, i) => `
           <div class="drag-item ${placedSources.has(src) ? 'placed' : ''}"
                draggable="${placedSources.has(src) ? 'false' : 'true'}"
                data-source="${src}"
