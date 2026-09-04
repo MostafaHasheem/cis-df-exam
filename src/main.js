@@ -125,6 +125,7 @@ function renderHome() {
           <div class="exam-cards">
             ${renderExamCard('bank1', bank1Meta)}
             ${renderExamCard('bank2', bank2Meta)}
+            ${renderExamCard('bank3', bank3Meta)}
           </div>
         ` : `
           <div class="history-section">
