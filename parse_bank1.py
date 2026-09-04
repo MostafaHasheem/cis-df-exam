@@ -1,10 +1,11 @@
 import re
 import json
-import random
+import docx
+import sys
 
 def parse_questions(filepath):
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
+    doc = docx.Document(filepath)
+    content = '\n'.join([p.text for p in doc.paragraphs])
     
     # Split by "Question X:"
     chunks = re.split(r'Question \d+:', content)
@@ -35,9 +36,6 @@ def parse_questions(filepath):
                         correct_answer[source] = target
             
             if sources:
-                # We will shuffle sources later in JS, but let's shuffle them here just in case!
-                # Wait, the user said "before we deploy it... randomized the sorting"
-                # Let's just output the arrays. The app can shuffle them.
                 questions.append({
                     "id": i,
                     "type": "drag-match",
@@ -47,8 +45,6 @@ def parse_questions(filepath):
                     "targets": targets,
                     "correctAnswer": correct_answer
                 })
-            else:
-                print(f"Warning: Drag drop question {i} has no pairs.")
             continue
             
         # Parse standard multiple choice
@@ -59,7 +55,7 @@ def parse_questions(filepath):
         correct_answer = ""
         
         for line in lines:
-            if line.startswith("A.") or line.startswith("B.") or line.startswith("C.") or line.startswith("D.") or line.startswith("E.") or line.startswith("F.") or line.startswith("G."):
+            if line.startswith("A.") or line.startswith("B.") or line.startswith("C.") or line.startswith("D.") or line.startswith("E.") or line.startswith("F.") or line.startswith("G.") or line.startswith("H."):
                 options.append(line)
             elif line.startswith("Correct Answer:"):
                 ans = line.split("Correct Answer:")[1].strip()
@@ -91,8 +87,8 @@ def parse_questions(filepath):
 def generate_js(questions, out_file):
     with open(out_file, 'w', encoding='utf-8') as f:
         f.write("export const bankMeta = {\n")
-        f.write("  title: 'CIS-DF Practice Exam',\n")
-        f.write("  description: 'Refined 80-question practice exam.',\n")
+        f.write("  title: 'Exam Model 1',\n")
+        f.write("  description: 'ServiceNow CIS-DF Practice Exam.',\n")
         f.write(f"  totalQuestions: {len(questions)},\n")
         f.write("  passingScore: 70,\n")
         f.write("  timeLimitMinutes: 90\n")
@@ -101,6 +97,6 @@ def generate_js(questions, out_file):
         f.write(json.dumps(questions, indent=2))
         f.write(";\n")
 
-qs = parse_questions('extracted_qs_1.txt')
-generate_js(qs, 'src/data/questions-bank1.js')
-print(f"Generated {len(qs)} questions.")
+qs = parse_questions(sys.argv[1])
+generate_js(qs, sys.argv[2])
+print(f"Generated {len(qs)} questions in {sys.argv[2]}")

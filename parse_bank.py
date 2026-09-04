@@ -7,36 +7,36 @@ def parse_questions(filepath):
     doc = docx.Document(filepath)
     content = '\n'.join([p.text for p in doc.paragraphs])
     
-    # We will find all occurrences of "Correct Answer: " and use them to split the text into questions.
-    # But some might be "Correct Answer:" or "Correct Answer :".
-    
-    # First, let's normalize the questions. If they start with "Question X:", remove it.
-    content = re.sub(r'Question \d+[^a-zA-Z0-9\n]*\n?', '', content, flags=re.IGNORECASE)
+    # Clean up "Question X:" strings if they exist
+    content = re.sub(r'^Question \d+[^a-zA-Z0-9\n]*\n?', '', content, flags=re.IGNORECASE|re.MULTILINE)
     content = re.sub(r'Chunk \d+:.*?\n', '', content, flags=re.IGNORECASE)
     
-    # Split by double newlines or similar to get blocks, but wait, the easiest way is to split by "Correct Answer:"
-    # Actually, if we split by "Correct Answer:", the i-th element contains the text and options for question i,
-    # AND the start of the (i-1)-th element contains the correct answer for question i-1!
-    
-    chunks = re.split(r'(Correct Answer:.*?)(?:\n\n|\n(?=[A-Z][a-z]+ [0-9] |\w)|\Z)', content, flags=re.IGNORECASE)
-    # The split will return [q1_text, correct_ans1, q2_text, correct_ans2, ...]
+    chunks = re.split(r'(?i)Correct Answer\s*:', content)
     
     questions = []
     
-    # Reassemble them into (text_block, answer_block)
-    # Wait, re.split with capture group returns: [text1, match1, text2, match2]
-    # Let's iterate in steps of 2
-    for i in range(0, len(chunks)-1, 2):
-        q_chunk = chunks[i].strip()
-        ans_chunk = chunks[i+1].strip()
-        
+    q_texts = []
+    answers = []
+    
+    q_texts.append(chunks[0].strip())
+    
+    for chunk in chunks[1:]:
+        if '\n' in chunk:
+            ans, next_q = chunk.split('\n', 1)
+            answers.append(ans.strip())
+            q_texts.append(next_q.strip())
+        else:
+            answers.append(chunk.strip())
+            # no next question
+    
+    for i in range(len(answers)):
+        q_chunk = q_texts[i].strip()
+        ans_val = answers[i].strip()
         if not q_chunk: continue
         
-        # Remove any remaining "Question X" that didn't get caught
-        q_chunk = re.sub(r'^Question \d+.*?\n', '', q_chunk, flags=re.IGNORECASE).strip()
+        q_id = i + 1
         
-        q_id = len(questions) + 1
-        
+        # Determine if it's drag and drop
         if "Drag" in q_chunk[:150] or "drag" in q_chunk[:150] or "Match" in q_chunk[:150]:
             lines = [l.strip() for l in q_chunk.split('\n') if l.strip()]
             q_text = lines[0]
@@ -64,14 +64,17 @@ def parse_questions(filepath):
                     "targets": targets,
                     "correctAnswer": correct_answer
                 })
+            else:
+                print(f"Warning: Drag drop question {q_id} has no pairs.")
             continue
             
         lines = [l.strip() for l in q_chunk.split('\n') if l.strip()]
+        if not lines: continue
         
         q_text_lines = []
         options = []
         
-        has_letters = any(l.startswith("A.") or l.startswith("A ") for l in lines)
+        has_letters = any(l.startswith("A.") or l.startswith("A ") or l.startswith("B.") or l.startswith("B ") for l in lines)
         
         for line in lines:
             if has_letters:
@@ -90,8 +93,6 @@ def parse_questions(filepath):
         else:
             q_text = " ".join(q_text_lines)
             
-        # parse answer
-        ans_val = ans_chunk.split(":", 1)[1].strip() if ":" in ans_chunk else ans_chunk
         if "No explicitly" in ans_val:
             correct_answer_list = []
         else:

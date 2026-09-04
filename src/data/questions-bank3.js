@@ -471,7 +471,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 33,
+    "id": 34,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Can be assigned to groups for resolving duplicate CIs: De-Duplication Tasks Offers insight into duplicate CIs within the CMDB: CMDB Health Dashboard Correctness Scorecard Offers a solution to resolve de-duplication tasks in bulk: De-Duplication Templates Provides a wizard to resolve de-duplication tasks individually: Duplicate CI Remediator Choose 2 options. What are the characteristics or functions of ServiceNow IntegrationHub ETL?",
@@ -487,7 +487,7 @@ export const questions = [
     ]
   },
   {
-    "id": 34,
+    "id": 35,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator needs to ingest relevant data from Microsoft SCCM into the CMDB. Which ingestion method brings the fastest time to value?",
@@ -500,7 +500,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 35,
+    "id": 36,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator would like to minimize stale CIs in the CMDB. Which CMDB Health Dashboard scorecard displays this information?",
@@ -512,7 +512,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 36,
+    "id": 37,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. Two new CI records are imported into the hardware class of the CMDB: CI1: The name of this CI record matches the name of an existing CI record in the CMDB. CI2: The IP address of this CI record matches the IP address of an existing CI record in the CMDB. Which is correct based on the identification rule and the imported CI records?",
@@ -525,7 +525,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 37,
+    "id": 38,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. A CMDB Administrator utilizing the CMDB Data Foundations Dashboard sees an issue and wants to run a playbook. Which types of documentation can they expect to be provided in a playbook?",
@@ -541,7 +541,7 @@ export const questions = [
     ]
   },
   {
-    "id": 38,
+    "id": 40,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Logical representation of a deploy system or application stack: Application Service Published to Service Owners and underpins one ore more business or application Services: Technology Management Service (Technical Service) Published to Business Users and underpins one ore more business capabilities: Business Service Choose 1 option. A CMDB Administrator knows that the CMDB Data Foundation Dashboard is a resource to monitor and improve data quality. What is a benefit of this dashboard?",
@@ -553,7 +553,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 39,
+    "id": 41,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Manager uses CMDB 360/Multisource CMDB to maintain and improve CMDB quality. Why would the Manager use CMDB 360/Multisource CMDB?",
@@ -566,7 +566,7 @@ export const questions = [
     "correctAnswer": "A"
   },
   {
-    "id": 40,
+    "id": 42,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. The Configuration Management team wants to confirm that all servers in the CMDB actually exist in the data center. Which CMDB Data Manager policy type would the team create?",
@@ -580,7 +580,7 @@ export const questions = [
     "correctAnswer": "A"
   },
   {
-    "id": 41,
+    "id": 43,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator has a number of similar de-duplication tasks that need to be remediated in bulk. How does the Administrator achieve this?",
@@ -593,7 +593,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 42,
+    "id": 44,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. The CMDB Configuration Management team wants to manage de-duplication tasks generated from data ingested into the CMDB via the Identification and Reconciliation Engine (IRE). In which area of the CMDB Workspace can they locate these de-duplication tasks?",
@@ -605,7 +605,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 43,
+    "id": 45,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A Configuration Management team has decided to start taking advantage of the CMDB 360/Multisource CMDB functionality. Which system property must be enabled?",
@@ -618,7 +618,7 @@ export const questions = [
     "correctAnswer": "A"
   },
   {
-    "id": 44,
+    "id": 46,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A Configuration Management Governance team is transitioning from utilizing legacy CMDB status fields to CSDM life cycle status fields. Which table can be modified?",
@@ -631,7 +631,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 45,
+    "id": 47,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator has imported data into the ServiceNow CMDB from a third-party source using a Service Graph Connector. The Administrator wants to review specific field to field mappings for the import. Which feature will show that information?",
@@ -643,7 +643,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 46,
+    "id": 48,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. A CMDB Administrator is considering whether to start using the playbooks provided on the CMDB Data Foundation Dashboard. What are the benefits to support the decision to leverage this feature?",
@@ -659,7 +659,7 @@ export const questions = [
     ]
   },
   {
-    "id": 47,
+    "id": 49,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator is managing group data from both the CI Class Manager and a Technical Service Offering for a specific class. CI Class Manager: -Managed by Group = Enterprise IT Services. Technical Service Offering: -Managed by Group = Windows Support, -Change Group = Change Management Team. What would be the Managed By Group for CIs from this class based on the configured values?",
@@ -671,7 +671,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 48,
+    "id": 50,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator, viewing the CMDB Data Foundations Dashboard, notices the Unique Locations Result percentage low. What is the recommended process from the associated playbook to correct this issue?",
@@ -684,7 +684,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 49,
+    "id": 51,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. An Asset Manager wants to ensure that Asset records and CI records are kept synchronized automatically. How does the Manager do this?",
@@ -700,7 +700,7 @@ export const questions = [
     ]
   },
   {
-    "id": 50,
+    "id": 52,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A Configuration Management team has successfully developed a healthy and trusted CMDB. They have integrated discovered infrastructure data, accurately referenced non-discoverable data (such as change and support group information), and made the CMDB service-aware using Service Mapping. Which field on a Change Request form is automatically populated after a CI is selected that references an appropriate change group?",
@@ -714,7 +714,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 51,
+    "id": 53,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. A Windows administration team wants a grouping of CIs using CMDB groups. Which methods can be used?",
@@ -730,7 +730,7 @@ export const questions = [
     ]
   },
   {
-    "id": 52,
+    "id": 54,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator wants to configure IRE rules for the CMDB. The CMDB Administrator opens CI Class Manager and sees the Health Inclusions Rules tab available under a CI Class. How are these rules utilized by the IRE?",
@@ -742,7 +742,7 @@ export const questions = [
     "correctAnswer": "A"
   },
   {
-    "id": 53,
+    "id": 55,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A health organization must track certain data (for example, regulated patient information) and its relation to Business Applications. Which action does CSDM recommend to meet this goal?",
@@ -754,7 +754,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 54,
+    "id": 56,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A data center has many servers. The CMDB Administrator wants to confirm that all servers exist. Which Data Manager policy type does the Administrator implement?",
@@ -767,7 +767,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 55,
+    "id": 57,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A ServiceNow Administrator needs to create multiple new classes in the CMDB but wants to follow ServiceNow's best practices for naming CMDB tables to prevent technical debt. Which is the starting prefix for all custom CMDB tables?",
@@ -780,7 +780,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 56,
+    "id": 58,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. ServiceNow Event Management significantly benefits from a well-maintained and properly populated CMDB. What are key advantages it provides to Event Management?",
@@ -796,7 +796,7 @@ export const questions = [
     ]
   },
   {
-    "id": 57,
+    "id": 59,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. A Configuration Manager is managing a CI class in the CMDB. The identification rule(s) needs an update. Where can the Configuration Manager view and configure the existing identification rule(s) for the class?",
@@ -812,7 +812,7 @@ export const questions = [
     ]
   },
   {
-    "id": 58,
+    "id": 61,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Recommended for mission-critical application services that require a precise approach using patterns: Service Mapping (Top-down) Best fit to map cloud-native, container-based, or machine environments: Tag-Based Ideal for custom-built applications and leverages fingerprinting to generate service maps in a timely manner: Service Mapping (Connection Suggestion) Ideal for small application services that can be easily defined using filters and CMDB queries: Dynamic CI Group A hospital has received a new CT Scanner. The inventory management team has created a catalog item doctors can use to schedule patients for scans. What CSDM domain should the inventory management team map the catalog item to?",
@@ -826,7 +826,7 @@ export const questions = [
     "correctAnswer": "E"
   },
   {
-    "id": 59,
+    "id": 62,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "An Enterprise Architect of a financial services company is working across the enterprise and wants to track their capabilities. Which CSDM 5 domain is used?",
@@ -840,7 +840,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 60,
+    "id": 63,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "The CMDB Administrator wants to leverage the Staleness metric from the CMDB Health Dashboard - Correctness Scorecard. Which field is used to calculate the duration of this metric?",
@@ -854,7 +854,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 61,
+    "id": 64,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "A CMDB Architect intends to populate the CMDB using the CSDM guidance. Which key stakeholders from the organization should be involved in decisions regarding population of the CMDB using the CSDM Crawl Stage?",
@@ -866,7 +866,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 62,
+    "id": 65,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "A CMDB Administrator has taken over management of a ServiceNow instance and has determined there are multiple deficiencies in the CMDB. During review of the CMDB Data Foundations Dashboard, the Administrator sees that ServiceNow offers Remediation Playbooks. How can Playbooks assist the Administrator in resolving these issues?",
@@ -878,7 +878,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 63,
+    "id": 66,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "What is the relationship between an application and a server?",
@@ -891,7 +891,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 64,
+    "id": 67,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "An organization needs to maintain non-discoverable attributes, such as warranty expiration dates, for hardware CIs. These attributes are not updated by automated discovery tools. What method ensures these attributes are accurately maintained for all CIs?",
@@ -903,7 +903,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 65,
+    "id": 68,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "A Service Desk Manager wants to leverage the Unified Map to find active incidents or problems for a selected CI. Which panel will give the manager visibility and details?",
@@ -916,7 +916,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 66,
+    "id": 69,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "A Service Portfolio Manager wants to know what Application Services their Business Service Offerings depend on. What stage of CSDM would map this relationship?",
@@ -930,7 +930,7 @@ export const questions = [
     "correctAnswer": "D"
   },
   {
-    "id": 67,
+    "id": 70,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "A CMDB Administrator needs to track which CIs and CI classes are missing key data. Which CMDB Health Dashboard scorecard supports tracking this requirement?",
@@ -942,7 +942,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 68,
+    "id": 71,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "During a CMDB Implementation, a team member is tasked with ensuring the accuracy and completeness of CI data. This person is also responsible for maintaining data quality and resolving discrepancies. Which role is responsible for these tasks?",
@@ -955,7 +955,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 69,
+    "id": 72,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "A CMDB Administrator needs insights into how their CMDB is configured according to ServiceNow recommended practice. Which should be used?",
@@ -968,7 +968,7 @@ export const questions = [
     "correctAnswer": "A"
   },
   {
-    "id": 70,
+    "id": 73,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "A customer wants to model their business applications and would like to capture different types of data that includes Personally Identifiable Information (PII) data. Based on these requirements, which CMDB class needs to be leveraged to achieve this?",
@@ -981,7 +981,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 71,
+    "id": 74,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. A CMDB Administrator needs to create a new CI class for the Internet of Things (IoT) Sensor in ServiceNow. What are the recommended practices for this specific activity?",
@@ -997,7 +997,7 @@ export const questions = [
     ]
   },
   {
-    "id": 72,
+    "id": 75,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "A CMDB Data Manager needs to access the ServiceNow platform to create, publish, and manage policies that automate and govern CI lifecycle operations, ensuring the CMDB remains healthy and efficient. Where can the Data Manager do this?",
@@ -1010,7 +1010,7 @@ export const questions = [
     "correctAnswer": "D"
   },
   {
-    "id": 73,
+    "id": 76,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "What ensures data volume in the CMDB is manageable?",
@@ -1022,7 +1022,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 74,
+    "id": 77,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. Which are business values of CMDB?",
@@ -1038,7 +1038,7 @@ export const questions = [
     ]
   },
   {
-    "id": 75,
+    "id": 78,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. Which ServiceNow solution creates automatic relationships?",
@@ -1054,7 +1054,7 @@ export const questions = [
     ]
   },
   {
-    "id": 76,
+    "id": 80,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "This table is pre-populated with mappings... : life_cycle_mapping This is a record attribute that reflects a meta-level state... : life_cycle_stage This is a record attribute that reflects a sub-level state... : life_cycle_stage_status This table uses the type of CI... : life_cycle_object Choose 1 option. Yesterday, an Apache Web Server CI was discovered as part of Service Mapping. Today, the application owner upgraded Apache to a different version and reran discovery of the service. What will happen in the CMDB?",
@@ -1067,7 +1067,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 77,
+    "id": 81,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A Change Manager aims to streamline ITSM processes by automatically populating fields on the Change form when a CI is selected. The Configuration Management team is working to ensure that the Change Group field is populated for all managed CIs. As a result, which base system field on the incident form will be automatically populated alter selecting a CI?",
@@ -1080,7 +1080,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 78,
+    "id": 82,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. CMDB class owners are receiving tasks under the 'My Work' tab in the CMDB Workspace. Which CMDB management tool is generating these tasks?",
@@ -1092,7 +1092,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 79,
+    "id": 83,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. Which type of CMDB Data Manager policy creates tasks that allow the assigned individual to update fields on the CI record?",
@@ -1105,7 +1105,7 @@ export const questions = [
     "correctAnswer": "D"
   },
   {
-    "id": 80,
+    "id": 84,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. Configuration Management requires an accurate inventory of devices to be reflected in theCMDB. Which are common use cases for using Agent Client Collector (ACC)?",
@@ -1121,7 +1121,7 @@ export const questions = [
     ]
   },
   {
-    "id": 81,
+    "id": 85,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A Configuration Manager has configured multiple data sources which are all authorized to update the same class and the same set of class attributes in the CMDB. What can the Configuration Manager do to control which data source should be the authoritative source of truth for a specific class or set of class attributes?",
@@ -1134,7 +1134,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 82,
+    "id": 86,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A Configuration Manager needs to leverage a policy type to automate the creation and assignment of tasks to validate the existence of CIs. Which policy type should be used to accomplish this goal?",
@@ -1147,7 +1147,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 83,
+    "id": 87,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. A CMDB Administrator wants to create a CMDB query to find all databases located in Seattle that are connected to application services. They also want to include incidents related to those databases. Which actions does the company take to build this query?",

@@ -646,7 +646,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 59,
+    "id": 60,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A Change Manager wants to gain value from CSDM. How will the Change Management process benefit from CSDM?",
@@ -659,7 +659,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 60,
+    "id": 62,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Has read-only access to CMDB data... : CI Analyst Accountable for managing all elements... : Service or Product Owner Manages assigned CI tables... : Configuration Manager/CMDB Admin Obtains highest level role... : CMDB Process Owner Choose 1 option. A development team is working on a project and an application will be deployed to many servers. There will be several security requirements that must be checked to adhere to lawful regulatory compliance because the application will be holding customer personal data (PII and PCI). Where in the CSDM does the development team look to store the information that will be used to satisfy the audits?",
@@ -671,7 +671,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 61,
+    "id": 63,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A Configuration Manager wants to use the Unified Map. Where would it be accessed?",
@@ -683,7 +683,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 62,
+    "id": 64,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A Platform Data Owner wants to improve data quality with a few reconciliation rules across the live discovery sources that are being used. The Data Owner knows the best option is to include CMDB 360/Multisource CMDB to manage and monitor discovery sources, but the company currently does not have a license for ITOM Discovery that is required for CMDB 360/Multisource CMDB. What can the Data Owner do in this case?",
@@ -695,7 +695,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 63,
+    "id": 65,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A Data Center Manager is working with the CMDB CI Class Manager to define the relationship between Application Servers and the Applications they host. The company has multiple Application Servers that host one or more Applications. Which describes the relationship between the Application Server table ([cmdb_ci_app_server]) and the Application table ([cmdb_ci_appl])?",
@@ -708,7 +708,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 64,
+    "id": 66,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator wants to improve data quality related to the CSDM. Which action should the Administrator take to meet this goal?",
@@ -720,7 +720,7 @@ export const questions = [
     "correctAnswer": "A"
   },
   {
-    "id": 65,
+    "id": 67,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. What is the difference between Data Certification and Attestation policies when managing a CI?",
@@ -733,7 +733,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 66,
+    "id": 68,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. According to the Common Service Data Model (CSDM), a server team is requesting a catalog item be created for infrastructure upgrade requests. Which role is involved in initiating the request and defining requirements?",
@@ -745,7 +745,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 67,
+    "id": 69,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A customer's CMDB is aligned to the CSDM Walk stage. What benefit is provided by the CMDB?",
@@ -757,7 +757,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 68,
+    "id": 70,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. The CMDB Administrator group aims to display meaningful results on the CMDB Health Dashboard Compliance Scorecard for server records that are not on the latest patch. What must be configured to achieve this goal?",
@@ -770,7 +770,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 69,
+    "id": 71,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. The CMDB Administrator has set-up two Dynamic Reconciliation Rules within the ServiceNow Production Instance. The 'Server' class has a Dynamic Reconciliation Rule of largest value for the RAM field. The 'Windows Server' class has a Dynamic Reconciliation Rule of most reported for the RAM field. Given the data (Tivoli: 4,096, ServiceNow: 4,096, LANDesk: 2,048, Altiris: 8,192) in the Multisource CMDB, which value would be added to the CMDB for RAM for a 'Server' CI?",
@@ -782,7 +782,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 70,
+    "id": 72,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator needs to identify which attributes have been created specifically for the Windows Server class. Which tab in the Attributes section is used?",
@@ -795,7 +795,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 71,
+    "id": 73,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Configuration Manager is reviewing the metrics on the CMDB Health Dashboard's Correctness Scorecard for the Server class which consists of a total of 60,000 servers in the CMDB. For the Duplicate metric, it shows Healthy CIs/Evaluated as 59,000/60,000. For the Orphan metric, it shows Healthy CIs/Evaluated as 45,000/50,000. Which configuration explains the difference in the scope of Server CIs (60,000 vs. 50,000) evaluated between the two metrics?",
@@ -808,7 +808,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 72,
+    "id": 74,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A healthcare provider faces a critical incident affecting its patient management system. The provider needs to determine the users impacted to mitigate disruption effectively. Which CSDM-related data should they leverage?",
@@ -821,7 +821,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 73,
+    "id": 75,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator wants to remove all Linux Servers in the organization that have not been updated in six months. Which recommended action does the Administrator take in Data Manager?",
@@ -833,7 +833,7 @@ export const questions = [
     "correctAnswer": "C"
   },
   {
-    "id": 74,
+    "id": 76,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. With CMDB 360/Multisource CMDB the Dynamic Reconciliation Rules will also be enabled. Based on the request of the management, a CMDB Administrator has to set up multiple Dynamic Reconciliation Rules. Which are available 'Dynamic Rule Types' within the 'Create Reconciliation Rule' wizard?",
@@ -849,7 +849,7 @@ export const questions = [
     ]
   },
   {
-    "id": 75,
+    "id": 77,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. Configuration Management needs to ensure data quality for all CIs in the CMDB. What areas of data quality for CIs are in the CMDB Health Dashboard?",
@@ -866,7 +866,7 @@ export const questions = [
     ]
   },
   {
-    "id": 76,
+    "id": 78,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. A CMDB Administrator has built a number of Technology Management Service Offerings (Technical Service Offerings) based on Dynamic CI Groups to better maintain group alignment for the member CI. Which Groups are synced to CIs from the offering that has a relationship to a Dynamic CI Group?",
@@ -882,7 +882,7 @@ export const questions = [
     ]
   },
   {
-    "id": 77,
+    "id": 79,
     "type": "multi",
     "instruction": "Choose 2 options.",
     "text": "Choose 2 options. A Configuration Management Process Owner is preparing solution options for presentation to the technical governance board for ingesting custom CIs to the CMDB. The solution needs to align with best practice, minimize the cost of future work (technical debt) and ensure compliance with future upgrades. Which solutions accomplish this?",
@@ -898,7 +898,7 @@ export const questions = [
     ]
   },
   {
-    "id": 78,
+    "id": 80,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A new custom class is needed to reflect a new application being managed in the CMDB. Which roles are minimally needed to add this custom CI class?",
@@ -911,7 +911,7 @@ export const questions = [
     "correctAnswer": "D"
   },
   {
-    "id": 79,
+    "id": 81,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. The CMDB Configuration Manager is using the CI Class Manager to manage the group ownership of CI classes and needs to leverage the ownership value specified in the CI Class Manager. When configuring a CMDB Data Manager policy, which group reference field should be set?",
@@ -924,7 +924,7 @@ export const questions = [
     "correctAnswer": "A"
   },
   {
-    "id": 80,
+    "id": 82,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator has installed a Service Graph Connector and customized a script transform. What will happen on subsequent upgrades if the default definition of the script transform is updated?",
@@ -936,7 +936,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 81,
+    "id": 83,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator wants only the CIs of Principal Classes to appear in CI reference fields, for example the CI reference fields accessible from an Incident Form. Where does the CMDB Administrator designate Principal Classes?",
@@ -949,7 +949,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 82,
+    "id": 84,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. An organization is changing data centers and needs to know the consequences of the planned changes. How can Application Service mapping be used as part of Change Management?",
@@ -961,7 +961,7 @@ export const questions = [
     "correctAnswer": "B"
   },
   {
-    "id": 83,
+    "id": 85,
     "type": "single",
     "instruction": "Choose 1 option.",
     "text": "Choose 1 option. A CMDB Administrator is implementing a Vulnerability Response or Security Incident Response and needs to ensure customers have enough context to estimate risk and set task priorities. Which Get Well Playbook from the CSDM Data Foundations Dashboard helps with this?",
