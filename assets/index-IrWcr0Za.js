@@ -21,6 +21,7 @@ var e=(e,t)=>()=>(t||(e((t={exports:{}}).exports,t),e=null),t.exports);(function
           <div class="exam-cards">
             ${M(`bank1`,t)}
             ${M(`bank2`,r)}
+            ${M(`bank3`,a)}
           </div>
         `:`
           <div class="history-section">
