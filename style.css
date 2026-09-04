@@ -263,6 +263,10 @@ body {
   background: var(--sn-teal);
 }
 
+.exam-card-badge.bank3 {
+  background: #6c5ce7;
+}
+
 .exam-card h3 {
   color: var(--text-light);
   font-size: 22px;

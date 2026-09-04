@@ -1,6 +1,7 @@
 // CIS-DF Exam Simulator — Main Application Controller
 import { questions as bank1Questions, bankMeta as bank1Meta } from './data/questions-bank1.js';
 import { questions as bank2Questions, bankMeta as bank2Meta } from './data/questions-bank2.js';
+import { questions as bank3Questions, bankMeta as bank3Meta } from './data/questions-bank3.js';
 import { storage } from './utils/storage.js';
 import { Timer } from './utils/timer.js';
 import { shuffle, generateAccessCode } from './utils/shuffle.js';
@@ -34,6 +35,7 @@ const app = document.getElementById('app');
 const banks = {
   bank1: { meta: bank1Meta, questions: bank1Questions },
   bank2: { meta: bank2Meta, questions: bank2Questions },
+  bank3: { meta: bank3Meta, questions: bank3Questions },
 };
 
 let state = {
@@ -201,6 +203,7 @@ function renderHome() {
       const attempts = [
         ...storage.getAttempts('bank1').map(a => ({ ...a, bankId: 'bank1' })),
         ...storage.getAttempts('bank2').map(a => ({ ...a, bankId: 'bank2' })),
+        ...storage.getAttempts('bank3').map(a => ({ ...a, bankId: 'bank3' })),
       ].sort((a, b) => new Date(b.date) - new Date(a.date));
       const filtered = state.historyBankFilter === 'all'
         ? attempts
@@ -221,7 +224,7 @@ function renderExamCard(bankId, meta) {
 
   return `
     <div class="exam-card">
-      <span class="exam-card-badge ${bankId === 'bank2' ? 'bank2' : ''}">${bankId === 'bank1' ? 'Bank 1' : 'Bank 2'}</span>
+      <span class="exam-card-badge ${bankId === 'bank2' ? 'bank2' : (bankId === 'bank3' ? 'bank3' : '')}">${bankId === 'bank1' ? 'Bank 1' : (bankId === 'bank2' ? 'Bank 2' : 'Bank 3')}</span>
       <h3>${meta.title}</h3>
       <p>${meta.description}</p>
       <div class="exam-card-stats">
@@ -352,22 +355,7 @@ function renderExam() {
           </div>
         </div>
         <div class="header-center">
-          <div class="header-proctoring">
-            <div class="proctoring-indicator">V</div>
-            <div class="proctoring-webcam">
-              <div class="proctoring-webcam-placeholder">
-                ${icons.user}
-              </div>
-            </div>
-            <div>
-              <div class="proctoring-label">Recording</div>
-            </div>
-          </div>
-          <div class="header-chat-icon" title="Chat">${icons.chat}</div>
-          <div class="header-access-code">
-            <span class="access-code-label">Access Code</span>
-            <span class="access-code-value">${state.accessCode}</span>
-          </div>
+          <!-- Removed recording and access code per user request -->
         </div>
         <div class="header-right">
           <div class="header-timer">
